@@ -1,3 +1,5 @@
 <?php
 include ('fnDate.php');
-findDate::getDate(2017);
+
+$findDate = new findDate();
+$findDate->getDate(2017);

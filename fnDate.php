@@ -25,7 +25,7 @@ class findDate
       $calendar[] = new customDate($startDate->format('Y'), $startDate->format('m'), $startDate->format('d'));
       $startDate->add(new DateInterval('P1D'));
     }
-    print_r($calendar);
+    var_dump($calendar);
     return $calendar;
   }
 }
