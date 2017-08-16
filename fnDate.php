@@ -8,16 +8,19 @@ class customDate
 
   public function __construct($Y, $M, $D)
   {
-    $Year = $Y;
-    $Month = $M;
-    $Day = $D;
+    $this->Year = $Y;
+    $this->Month = $M;
+    $this->Day = $D;
   }
 }
 
-class findDate
+function initCalendar($Year)
 {
-  function getDate($Year)
+  $calendar = array();
+  $startDate = new DateTime($Year.'-01-01');
+  while ($startDate->format('Y') == $Year)
   {
+<<<<<<< HEAD
     $calendar = array();
     $startDate = new DateTime($Year.'-01-01');
     while ($startDate->format('Y') == $Year)
@@ -27,5 +30,11 @@ class findDate
     }
     var_dump($calendar);
     return $calendar;
+=======
+    $calendar[] = new customDate($Year, $startDate->format('m'), $startDate->format('d'));
+    print_r($calendar[0]);
+    $startDate->add(new DateInterval('P1D'));
+>>>>>>> origin/master
   }
+  return $calendar;
 }
