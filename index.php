@@ -1,3 +1,5 @@
 <?php
+
 include ('fnDate.php');
-findDate::getDate(2017);
+
+print_r(initCalendar(2017));
