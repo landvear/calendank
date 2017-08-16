@@ -1,6 +1,6 @@
-
 <?php
 include ('fnDate.php');
+<<<<<<< HEAD
 
 
     $Year = date('Y');
@@ -13,3 +13,6 @@ include ('fnDate.php');
 
 
 
+=======
+findDate::getDate(2017);
+>>>>>>> origin/master

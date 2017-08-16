@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
    /* class CustomDate
     {
         function getDate($Year)
@@ -16,10 +17,23 @@
                 $w = str_replace('0','7',$startDate->format('w'));
 
                 $calendar[$Y][$M][$d] = $w;
+=======
+class customDate
+{
+  public $Year;
+  public $Month;
+  public $Day;
+>>>>>>> origin/master
 
-                $startDate->add(new DateInterval('P1D'));
-            }
+  public function __construct($Y, $M, $D)
+  {
+    $Year = $Y;
+    $Month = $M;
+    $Day = $D;
+  }
+}
 
+<<<<<<< HEAD
             return $calendar;
 
         }
@@ -55,4 +69,20 @@ class findDate
         print_r($calendar);
         return $calendar;
     }
+=======
+class findDate
+{
+  function getDate($Year)
+  {
+    $calendar = array();
+    $startDate = new DateTime($Year.'-01-01');
+    while ($startDate->format('Y') == $Year)
+    {
+      $calendar[] = new customDate($startDate->format('Y'), $startDate->format('m'), $startDate->format('d'));
+      $startDate->add(new DateInterval('P1D'));
+    }
+    print_r($calendar);
+    return $calendar;
+  }
+>>>>>>> origin/master
 }
